@@ -3,12 +3,13 @@
     margin: 0;
 }
 
+
 body {
     background-image: url(img/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-position: top;
-    background-color: rgba(31, 30, 30, 0.726);
+    background-color: rgba(31, 30, 30, 0.904);
     background-blend-mode: overlay;
 }
 
@@ -17,31 +18,38 @@ body {
     color: cornsilk;
     border-bottom: 3px solid rgba(255, 255, 0, 0.418);
     padding-bottom: .3em;
-    margin: 1em;
+    
 }
 header {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    
+
 }
 
 ul li {
     display: inline-block;
 }
-
-nav a {
+.nav-links {
+    margin: 1.5em auto;
+    width: 100%;
+    text-align: center;
+}
+.nav-links a {
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
-    margin: 1.5em;
+    margin: 1.6em;
     font-family: sans-serif;
-    padding-bottom: 0.3em;
+    padding-bottom: .2em;
     transition-duration: 0.2s;
     
 }
 
-nav a:hover {
+.nav-links a:hover {
     border-bottom: 2px solid rgba(255, 255, 0, 0.719);
 }
 
@@ -53,19 +61,83 @@ nav a:hover {
 .description-section {
     position: absolute;
     top: 25em;
-    padding: 1em;
+    padding: .5em;
     margin: 0 auto;
     text-align: center;
+    width: auto;
 }
 
 h1 {
-    font-family: sans-serif;
     color: cornsilk;
     padding: .5em;
+    animation-name: appear;
+    animation-duration: 2.5s;
+    animation-delay: .5;
+    font-family: sans-serif;
 }
 
+
+
 .description {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 1.9rem;
+    line-height: 1.3em;
+    animation-name: fadein;
+    animation-delay: 1s;
+    animation-duration: 5s;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    border-top: 2px solid rgba(0, 0, 0, 0.795);
+    background-color: rgba(0, 0, 0, 0.438);
+}
+.social-links {
+    float: right;
+    
+}
+.social-handles {
+    color: rgb(92, 90, 90);
+    font-size: 2rem;
+    margin: .5em .5em;
+}
+
+/*===============
+Animations
+==================*/
+@keyframes fadein {
+    from{
     color: white;
     font-size: 1.6rem;
     line-height: 1.3em;
+    opacity: 0;
+    }
+
+    to {
+    color: white;
+    font-size: 1.6rem;
+    line-height: 1.3em;
+    opacity: 1;
+    }
 }
+
+@keyframes appear {
+    from {
+    font-family: sans-serif;
+    color: cornsilk;
+    padding: .5em;
+    opacity: 0;
+    }
+
+    to {
+    font-family: sans-serif;
+    color: cornsilk;
+    padding: .5em;
+    opacity: 1;
+    }
+}
+
